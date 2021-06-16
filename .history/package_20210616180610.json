@@ -5,7 +5,7 @@
   "description": "Demo Project for COMP229 - Week 6",
   "main": "index.js",
   "repository": "https://github.com/Vincent-Dim/COMP229-M2021-Week6d.git",
-  "author": "Vincent Dim",
+  "author": "",
   "license": "MIT",
   "scripts": {
     "start": "node index.js"
