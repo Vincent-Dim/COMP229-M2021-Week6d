@@ -31,31 +31,3 @@ export function DisplayContactPage(req: Request, res: Response, next: NextFuncti
 {
     res.render('index', { title: 'Contact Us', page: 'contact'  });
 }
-
-export function DisplayLoginPage(req: Request, res: Response, next: NextFunction): void
-{
-    if(!req.user)
-    {
-        res.render('index', { title: 'Login', page: 'login', messages: req.flash('loginMessage') });
-    }
-}
-
-export function ProcessLoginPage(req: Request, res: Response, next: NextFunction): void
-{
-   
-}
-
-export function DisplayRegisterPage(req: Request, res: Response, next: NextFunction): void
-{
-   
-}
-
-export function ProcessRegisterPage(req: Request, res: Response, next: NextFunction): void
-{
-   
-}
-
-export function ProcessLogoutPage(req: Request, res: Response, next: NextFunction): void
-{
-   
-}

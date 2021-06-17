@@ -3,7 +3,7 @@ const router = express.Router();
 export default router;
 
 // instantiate an object of type index controller
-import { DisplayAboutPage, DisplayContactPage, DisplayHomePage, DisplayLoginPage, DisplayProjectsPage, DisplayRegisterPage, DisplayServicesPage, ProcessLoginPage, ProcessLogoutPage, ProcessRegisterPage } from '../Controllers/index';
+import { DisplayAboutPage, DisplayContactPage, DisplayHomePage, DisplayProjectsPage, DisplayServicesPage } from '../Controllers/index';
 
 /* GET home page. */
 router.get('/', DisplayHomePage);
@@ -35,10 +35,7 @@ router.post('/login', ProcessLoginPage);
 router.get('/register', DisplayRegisterPage);
 
 /* POST register page - --PROCESS register page when user clicks the register button. */
-router.post('/register', ProcessRegisterPage);
+router.post('/register', DisplayRegisterPage);
 
-
-/* GET  - --process the LOGOUT page when /logout is appended to local address. */
-router.get('/logout', ProcessLogoutPage);
 
 //module.exports = router;
