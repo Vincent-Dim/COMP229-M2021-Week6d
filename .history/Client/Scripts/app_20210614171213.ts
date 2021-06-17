@@ -6,11 +6,11 @@
     function confirmDelete()
     {
       // confirm deletion
-      $("a.delete").on("click", function(event){   //this is jquery code
+      $("a.delete").on("click", function(event){
         if(!confirm("Are you sure?"))
         {
           event.preventDefault();
-          location.href = '/clothing-list';   //If confirmation of delete = cancel, send user back to clothing-list
+          location.href = '/clothing-list';
         }       
       });
     }
