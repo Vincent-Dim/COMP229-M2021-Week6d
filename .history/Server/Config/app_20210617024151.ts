@@ -74,10 +74,6 @@ app.use(passport.session());
 //implement auth Strategy
 passport.use(User.createStrategy());
 
-// serialize (encrypting) and deserialize (decrypting) user data (username and password)
-passport.serializeUser(User.serializeUser());
-passport.deserializeUser(User.deserializeUser());
-
 
 // create routing through event handling
 app.use('/', indexRouter);

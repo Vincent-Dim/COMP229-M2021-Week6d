@@ -57,28 +57,6 @@ app.use(express.static(path.join(__dirname, '../../node_modules')));
 // add support for cors
 app.use(cors());
 
-// setup express session
-app.use(session({
-  secret: DBConfig.Secret,
-  saveUninitialized: false,
-  resave: false
-}));
-
-// initialize flash
-app.use(flash());
-
-//initialize passport
-app.use(passport.initialize());
-app.use(passport.session());
-
-//implement auth Strategy
-passport.use(User.createStrategy());
-
-// serialize (encrypting) and deserialize (decrypting) user data (username and password)
-passport.serializeUser(User.serializeUser());
-passport.deserializeUser(User.deserializeUser());
-
-
 // create routing through event handling
 app.use('/', indexRouter);
 app.use('/clothing-list', clothingRouter);
